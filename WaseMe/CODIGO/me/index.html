@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Importação de Script</title>
+    
+    <script src="index.js"></script>
+    
+    <style>
+        .table-responsive-custom {
+            overflow-x: auto;
+            max-width: 100%; 
+        }
+        h1,p{
+            width: 100%;
+            text-align: center;
+        }
+
+        .gradiente-texto-abreu {
+            background-image: linear-gradient(to right, #057517, #04128f); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+        }
+        .gradiente-texto-igarassu {
+            background-image: linear-gradient(to right, #057517, #f8f00e); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+        }
+        .gradiente-texto-recife {
+            background-image: linear-gradient(to right, #051075, #04128f); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+        }
+
+        .svg{
+            width: 50px;
+            height: 50px;
+            padding-right: 10px;
+        }
+
+        tr, td {
+            border-bottom-width: inherit;
+        }
+
+        #btn-violet{
+            background-color: violet;
+        }
+       
+        #btn-violet:hover{
+            background-color: rgb(213, 100, 213);
+        }
+
+        #btn-start{
+            background-image: linear-gradient(to right, #fb01b4, #011afb, #00fd11, #eefb01, #fd0000); 
+            width: 120px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1>Esse é seu WasePlay Particular</h1>
+    <p id="meuParagrafo">Monte sua cidade e se surpreenda com as possibilidades!</p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col dropdown">
+                <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Selecione sua Cidade
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">Abreu e Lima</a></li>
+                  <li><a class="dropdown-item">Igarassu</a></li>
+                  <li><a class="dropdown-item">Recife</a></li>
+                  <li><a class="dropdown-item">Paulista</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3><b id="cidadeSelecionada"></b></h3>
+            </div>
+            <div class="col">
+                <button class="btn" id="btn-start"><b style="color: white;"> Start </b></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="city">
+        <div class="row">
+            <div class="col">
+                <div class="table-responsive-custom">
+                    <table class="table">
+                        <tbody id="matrizCidade" style="text-align: center;">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: max-content; display: table;">
+            <div class="modal-content" style="width: max-content;">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col" id="PARTIDA"> <button class="btn" id="btn-violet"><img class="svg" src="./img/CARRO2.svg"><b>PARTIDA</b></button></div>
+                        <div class="col" id="CHEGADA"> <button class="btn btn-warning"><img class="svg" src="./img/CHEGADA1.svg"><b>CHEGADA</b></button></div>
+                        <div class="col" id="CASA"> <button class="btn btn-success"><img class="svg" src="./img/CASA.svg"><b>CASA</b></button></div>
+                        <div class="col" id="RUA"><button class="btn btn-danger"><img class="svg" src="./img/RUA.svg"><b>RUA</b></button></div>
+                        <div class="col" id="PREDIO"><button class="btn btn-info"><img class="svg" src="./img/PREDIO.svg"><b>PREDIO</b></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="container" id="log">
+
+    </div>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
